@@ -9,12 +9,12 @@ import SwiftUI
 
 struct TrafficLightsView: View {
     var color: Color
-    var opacity: Double
+    var opacity: CGFloat
     
     var body: some View {
             Circle()
                 .foregroundColor(color)
-                .frame(width: 150, height: 150)
+                .frame(width: 100, height: 100)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.white, lineWidth: 4))
                 .opacity(0.3)
