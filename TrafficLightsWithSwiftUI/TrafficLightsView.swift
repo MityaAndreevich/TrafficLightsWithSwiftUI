@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrafficLightsView: View {
     var color: Color
-    var opacity: CGFloat
+    var opacity: Double
     
     var body: some View {
             Circle()
