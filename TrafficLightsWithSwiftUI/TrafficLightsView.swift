@@ -9,24 +9,23 @@ import SwiftUI
 
 struct TrafficLightsView: View {
     var color: Color
+    var opacity: Double
     
     var body: some View {
-        VStack {
             Circle()
                 .foregroundColor(color)
                 .frame(width: 150, height: 150)
-                //.clipShape(Circle())
+                .clipShape(Circle())
                 .overlay(Circle().stroke(Color.white, lineWidth: 4))
-        }
+                .opacity(0.3)
     }
 }
 
 struct RedLight_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            TrafficLightsView(color: .red)
-            TrafficLightsView(color: .yellow)
-            TrafficLightsView(color: .green)
+            TrafficLightsView(color: .red, opacity: 0.3)
+            
         }
     }
 }
