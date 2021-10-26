@@ -30,8 +30,7 @@ struct ContentView: View {
                 Button(action: {
                     buttonText = "Next"
                     changeLights()
-                })
-                {
+                }) {
                     Text("\(buttonText)")
                         .font(.title)
                         .frame(width: 180, height: 60)
@@ -40,7 +39,7 @@ struct ContentView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .overlay(RoundedRectangle(cornerRadius: 20)
                                     .stroke(Color.white, lineWidth: 4))
-                        
+                    
                 }
                 .padding()
             }

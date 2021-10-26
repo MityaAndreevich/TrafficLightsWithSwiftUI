@@ -12,12 +12,12 @@ struct TrafficLightsView: View {
     var opacity: Double
     
     var body: some View {
-            Circle()
-                .foregroundColor(color)
-                .frame(width: 100, height: 100)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .opacity(opacity)
+        Circle()
+            .foregroundColor(color)
+            .frame(width: 100, height: 100)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.white, lineWidth: 4))
+            .opacity(opacity)
     }
 }
 
