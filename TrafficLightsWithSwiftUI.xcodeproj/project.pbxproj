@@ -11,6 +11,7 @@
 		5FD1B0C6272745C7000A92EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1B0C5272745C7000A92EA /* ContentView.swift */; };
 		5FD1B0C8272745C8000A92EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD1B0C7272745C8000A92EA /* Assets.xcassets */; };
 		5FD1B0CB272745C8000A92EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD1B0CA272745C8000A92EA /* Preview Assets.xcassets */; };
+		5FD1B0D22728215C000A92EA /* TrafficLightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1B0D12728215C000A92EA /* TrafficLightsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5FD1B0C5272745C7000A92EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5FD1B0C7272745C8000A92EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FD1B0CA272745C8000A92EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5FD1B0D12728215C000A92EA /* TrafficLightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				5FD1B0C3272745C7000A92EA /* TrafficLightsWithSwiftUIApp.swift */,
 				5FD1B0C5272745C7000A92EA /* ContentView.swift */,
+				5FD1B0D12728215C000A92EA /* TrafficLightsView.swift */,
 				5FD1B0C7272745C8000A92EA /* Assets.xcassets */,
 				5FD1B0C9272745C8000A92EA /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				5FD1B0C6272745C7000A92EA /* ContentView.swift in Sources */,
 				5FD1B0C4272745C7000A92EA /* TrafficLightsWithSwiftUIApp.swift in Sources */,
+				5FD1B0D22728215C000A92EA /* TrafficLightsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+            VStack {
+                TrafficLightsView(color: .red)
+                TrafficLightsView(color: .yellow)
+                TrafficLightsView(color: .green)
+                Spacer()
+                Button("Go") {
+                    
+                }
+            }
             .padding()
-    }
+        }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
