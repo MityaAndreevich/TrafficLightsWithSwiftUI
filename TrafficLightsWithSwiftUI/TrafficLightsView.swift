@@ -17,7 +17,7 @@ struct TrafficLightsView: View {
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .opacity(0.3)
+                .opacity(opacity)
     }
 }
 
