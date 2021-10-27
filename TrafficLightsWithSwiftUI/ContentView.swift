@@ -14,9 +14,11 @@ enum CurrentLights {
 struct ContentView: View {
     @State var buttonText = "Go"
     
-    @State var opacityForRed: Double = 0.3
-    @State var opacityForYellow: Double = 0.3
-    @State var opacityForGreen: Double = 0.3
+    @State private var opacityForRed = 0.3
+    @State private var opacityForYellow = 0.3
+    @State private var opacityForGreen = 0.3
+    
+    @State private var lights = CurrentLights.red
     
     var body: some View {
         ZStack {
@@ -46,7 +48,6 @@ struct ContentView: View {
         }
     }
     
-    @State private var lights = CurrentLights.red
     private let lightsOn: Double = 1.0
     private let lightsOff: Double = 0.3
     
