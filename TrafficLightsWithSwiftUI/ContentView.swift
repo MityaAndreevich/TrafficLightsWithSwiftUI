@@ -33,19 +33,11 @@ struct ContentView: View {
                 TrafficLightsView(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
                 TrafficLightsView(color: .green, opacity: currentLight == .green ? 1 : 0.3)
                 Spacer()
-                Button(action: {
-                    buttonText = "Next"
+                ChangeColorButton(buttonText: buttonText) {
+                    if buttonText == "Go" {
+                        buttonText = "Next"
+                    }
                     nextColor()
-                }) {
-                    Text("\(buttonText)")
-                        .font(.title)
-                        .frame(width: 180, height: 60)
-                        .foregroundColor(.white)
-                        .background(Color.blue)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .overlay(RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.white, lineWidth: 4))
-                    
                 }
                 .padding()
             }
