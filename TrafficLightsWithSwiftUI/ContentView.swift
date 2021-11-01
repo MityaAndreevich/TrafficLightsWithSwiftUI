@@ -12,26 +12,30 @@ enum CurrentLights {
 }
 
 struct ContentView: View {
-    @State var buttonText = "Go"
+    @State private var buttonText = "Go"
     
-    @State private var opacityForRed = 0.3
-    @State private var opacityForYellow = 0.3
-    @State private var opacityForGreen = 0.3
+    @State private var currentLight = CurrentLights.red
     
-    @State private var lights = CurrentLights.red
+    private func nextColor() {
+        switch currentLight {
+        case .red: currentLight = .yellow
+        case .yellow: currentLight = .green
+        case .green: currentLight = .red
+        }
+    }
     
     var body: some View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
-            VStack {
-                TrafficLightsView(color: .red, opacity: opacityForRed)
-                TrafficLightsView(color: .yellow, opacity: opacityForYellow)
-                TrafficLightsView(color: .green, opacity: opacityForGreen)
+            VStack(spacing: 20) {
+                TrafficLightsView(color: .red, opacity: currentLight == .red ? 1 : 0.3)
+                TrafficLightsView(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
+                TrafficLightsView(color: .green, opacity: currentLight == .green ? 1 : 0.3)
                 Spacer()
                 Button(action: {
                     buttonText = "Next"
-                    changeLights()
+                    nextColor()
                 }) {
                     Text("\(buttonText)")
                         .font(.title)
@@ -45,26 +49,6 @@ struct ContentView: View {
                 }
                 .padding()
             }
-        }
-    }
-    
-    private let lightsOn: Double = 1.0
-    private let lightsOff: Double = 0.3
-    
-    private func changeLights() {
-        switch lights {
-        case .red:
-            opacityForRed = lightsOn
-            opacityForGreen = lightsOff
-            lights = .yellow
-        case .yellow:
-            opacityForRed = lightsOff
-            opacityForYellow = lightsOn
-            lights = .green
-        case .green:
-            opacityForYellow = lightsOff
-            opacityForGreen = lightsOn
-            lights = .red
         }
     }
 }
