@@ -23,6 +23,6 @@ struct TrafficLightsView: View {
 
 struct RedLight_Previews: PreviewProvider {
     static var previews: some View {
-            TrafficLightsView(color: .red, opacity: 0.3)
+        TrafficLightsView(color: .red, opacity: 0.3)
     }
 }
